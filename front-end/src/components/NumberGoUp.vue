@@ -45,7 +45,7 @@ export default {
         if (this.rngManip == 0.02) alert("Level up!")
       }
       let rng = Math.random() + this.rngManip
-      if (rng > 0.3) this.score += Math.ceil(Math.exp(this.rngManip * 100))
+      if (rng > 0.8) this.score += Math.ceil(Math.exp(this.rngManip * 100))
       else this.score += this.rngManip * 100
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <div class="leaderboard">
     <h2>High Scores</h2>
-    <table class="pure-table">
+    <table class="scores pure-table">
       <tbody v-for="score in scores" v-bind:key="score._id">
         <tr>
           <td>{{ score.score }}</td>
@@ -37,3 +37,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.scores {
+  justify-content: center;
+}
+</style>

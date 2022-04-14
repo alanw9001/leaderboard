@@ -1,3 +1,4 @@
+const { json } = require("body-parser")
 const express = require("express")
 const mongoose = require('mongoose')
 
@@ -79,7 +80,7 @@ router.post('/', async (req, res) => {
 // get leaderboard of all scores
 router.get('/', async (req, res) => {
   try {
-    let scores = Score.find().sort({
+    let scores = await Score.find().sort({
       score: -1
     }).populate('user')
     return res.send(scores)
