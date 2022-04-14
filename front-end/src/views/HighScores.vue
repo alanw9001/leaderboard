@@ -5,6 +5,7 @@
       <tbody v-for="score in scores" v-bind:key="score._id">
         <tr>
           <td>{{ score.score }}</td>
+          <td>{{ score.user.username }}</td>
         </tr>
       </tbody>
     </table>
